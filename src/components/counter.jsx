@@ -15,8 +15,8 @@ class Counter extends Component {
   //   this.handleIncrement = this.handleIncrement.bind(this);
   // }
 
-  handleIncrement = (product) => {
-    console.log(product);
+  handleIncrement = () => {
+    // console.log(product);
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -25,18 +25,18 @@ class Counter extends Component {
     classes += this.state.count == 0 ? "warning" : "primary";
 
     return (
-      <React.Fragment>
+      <div>
         {/* <img src={this.state.imageUrl} alt="" /> */}
 
         <span style={this.styles} className={classes}>
           {this.formatCount()}
         </span>
 
-        <button onClick={() => this.handleIncrement(product)}>Increment</button>
+        <button onClick={() => this.handleIncrement()}>Increment</button>
 
         {/* Rendering dynamic list */}
-        {this.renderTags()}
-      </React.Fragment>
+        {/* {this.renderTags()} */}
+      </div>
     );
   }
   renderTags() {
