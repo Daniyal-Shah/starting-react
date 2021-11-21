@@ -2,27 +2,20 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    value: this.props.value,
     imageUrl: "https://picsum.photos/200",
     tags: ["tag1", "tag2", "tag3"],
   };
-  // styles = {
-  //   fontSize: "10px",
-  //   fontWeight: "bold",
-  // };
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
 
   handleIncrement = () => {
-    // console.log(product);
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.value + 1 });
   };
 
   render() {
     let classes = "btn mx-2 btn-";
-    classes += this.state.count == 0 ? "warning" : "primary";
+    classes += this.state.value == 0 ? "warning" : "primary";
+
+    console.log("props", this.props);
 
     return (
       <div>
@@ -51,7 +44,7 @@ class Counter extends Component {
       );
   }
   formatCount() {
-    return this.state.count === 0 ? "Zero" : this.state.count;
+    return this.state.value === 0 ? "Zero" : this.state.value;
   }
 }
 
