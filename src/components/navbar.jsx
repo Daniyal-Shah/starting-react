@@ -1,4 +1,5 @@
 //Stateless functional components
+
 const NavBar = (props) => {
   return (
     <div>
