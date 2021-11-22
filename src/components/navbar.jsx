@@ -1,13 +1,13 @@
 //Stateless functional components
 
-const NavBar = (props) => {
+const NavBar = ({ totalCounters }) => {
   return (
     <div>
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
           Navbar
           <span className=" badge rounded-pill bg-secondary ms-2 ">
-            {props.totalCounters}
+            {totalCounters}
           </span>
         </a>
       </nav>
