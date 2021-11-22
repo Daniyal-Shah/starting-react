@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-
 //Stateless functional components
 const NavBar = (props) => {
   return (
